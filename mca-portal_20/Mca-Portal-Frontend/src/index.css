@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f6f4ec;
+  color: #12172b;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+::selection {
+  background-color: #2f9e6e;
+  color: #fffdf8;
+}
+
+/* Scroll-reveal utility, toggled by the useReveal() hook */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal.delay-1.in-view { transition-delay: 0.08s; }
+.reveal.delay-2.in-view { transition-delay: 0.16s; }
+.reveal.delay-3.in-view { transition-delay: 0.24s; }
+.reveal.delay-4.in-view { transition-delay: 0.32s; }
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Reusable component-level classes */
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-lg bg-ink px-5 py-2.5 text-sm font-semibold text-paper-alt shadow-pop transition-transform duration-150 hover:-translate-y-0.5 hover:-translate-x-0.5;
+  }
+  .btn-outline {
+    @apply inline-flex items-center gap-2 rounded-lg border-[1.5px] border-ink px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-ink hover:text-paper-alt;
+  }
+  .kicker {
+    @apply mb-3 block font-mono text-xs uppercase tracking-[0.14em] text-signal;
+  }
+  .card {
+    @apply rounded-2xl border border-rule bg-paper-alt shadow-card;
+  }
+  .section {
+    @apply px-6 py-16 md:px-10 md:py-24;
+  }
+}
