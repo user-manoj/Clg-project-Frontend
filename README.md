@@ -2,6 +2,8 @@
 
 A React-based portal for an MCA department that provides students with study materials, online tests, notices, previous-year question papers, faculty information, and performance reports. Lecturers can manage academic content through a dedicated workspace.
 
+![image alt](https://github.com/user-manoj/Clg-project-Frontend/blob/main/Frontend-pic.png?raw=true)
+
 ## 🚀 Features
 
 * 📚 Study notes with filtering
